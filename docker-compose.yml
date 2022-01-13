@@ -37,9 +37,10 @@ services:
       - synapse
 
   element:
-    image: vectorim/element-web
+    image: vectorim/element-web:latest
     restart: unless-stopped
     container_name: element
+    - ./element-config.json:/app/config.json:Z
     networks:
       - synapse
 
