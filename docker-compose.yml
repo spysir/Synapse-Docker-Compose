@@ -42,7 +42,7 @@ services:
       - PUID=1000
       - PGID=1000
       - URL=arcticfoxes.net
-      - SUBDOMAINS=matrix
+      - SUBDOMAINS=matrix,app
       - VALIDATION=http
       - EMAIL=changeme@arcticfoxes.net
       - ONLY_SUBDOMAINS=true
