@@ -10,6 +10,7 @@ services:
     # Since synapse does not retry to connect to the database, restart upon
     # failure
     restart: unless-stopped
+    container_name: synapse
     # See the readme for a full documentation of the environment settings
     # NOTE: You must edit homeserver.yaml to use postgres, it defaults to sqlite
     environment:
