@@ -61,10 +61,10 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - URL=arcticfoxes.net
+      - URL=yourdomain.tld
       - SUBDOMAINS=matrix,app,jitsi
       - VALIDATION=http
-      - EMAIL=changeme@arcticfoxes.net
+      - EMAIL=changeme@yourdomain.tld
       - ONLY_SUBDOMAINS=true
     volumes:
       - ./swag:/config:Z
