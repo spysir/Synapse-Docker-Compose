@@ -75,3 +75,6 @@ services:
       - 80:80
     networks:
       - matrix
+
+networks:
+  matrix:
