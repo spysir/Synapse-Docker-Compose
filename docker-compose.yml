@@ -20,7 +20,7 @@ services:
     depends_on:
       - postgres
     networks:
-      - synapse
+      - matrix
 
   postgres:
     image: docker.io/postgres:12-alpine
@@ -34,7 +34,7 @@ services:
     volumes:
       - ./schemas:/var/lib/postgresql/data:Z
     networks:
-      - synapse
+      - matrix
 
   element:
     image: vectorim/element-web:latest
@@ -42,7 +42,7 @@ services:
     container_name: element
     - ./element-config.json:/app/config.json:Z
     networks:
-      - synapse
+      - matrix
 
   swag:
     image: ghcr.io/linuxserver/swag
@@ -66,4 +66,4 @@ services:
       - 443:443
       - 80:80
     networks:
-      - synapse
+      - matrix
