@@ -17,12 +17,14 @@ services:
     volumes:
       - ./files:/data:Z
     depends_on:
-      - db
+      - postgres
     networks:
       - synapse
 
-  db:
+  postgres:
     image: docker.io/postgres:12-alpine
+    restart: unless-stopped
+    container_name: postgres
     # Change that password, of course!
     environment:
       - POSTGRES_USER=synapse
@@ -33,8 +35,16 @@ services:
     networks:
       - synapse
 
+  element:
+    image: vectorim/element-web
+    restart: unless-stopped
+    container_name: element
+    networks:
+      - synapse
+
   swag:
     image: ghcr.io/linuxserver/swag
+    restart: unless-stopped
     container_name: swag
     cap_add:
       - NET_ADMIN
@@ -42,7 +52,7 @@ services:
       - PUID=1000
       - PGID=1000
       - URL=arcticfoxes.net
-      - SUBDOMAINS=matrix,app
+      - SUBDOMAINS=matrix,app,jitsi
       - VALIDATION=http
       - EMAIL=changeme@arcticfoxes.net
       - ONLY_SUBDOMAINS=true
@@ -55,4 +65,3 @@ services:
       - 80:80
     networks:
       - synapse
-    restart: unless-stopped
