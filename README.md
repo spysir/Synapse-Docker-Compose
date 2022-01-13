@@ -7,6 +7,7 @@ Matrix Synapse Docker-Compose
    - Update web_client_location to app.yourdomain.tld (Remember to remove the comment #)
    - Update public_baseurl to matrix.yourdomain.tld (Remember to remove the comment #)
    - Uncomment serve_server_wellknown to enable it and configure https://yourdoman.tld/.well-known/matrix/server for federation
+   - Change `pepper` in your password config. Uncomment the setting to enable it.
    - Configure the mail credentials if you have a mail server 
    - Enable `encryption_enabled_by_default_for_room_type` by default
    - Enable redis. Put `redis` as the host instead of `localhost`.
