@@ -23,7 +23,7 @@ services:
       - matrix
 
   postgres:
-    image: docker.io/postgres:12-alpine
+    image: docker.io/postgres:alpine
     restart: unless-stopped
     container_name: postgres
     # Change that password, of course!
