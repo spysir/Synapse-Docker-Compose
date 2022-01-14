@@ -14,4 +14,4 @@ Matrix Synapse Docker-Compose
    - Enable `encryption_enabled_by_default_for_room_type` by default
    - Enable redis. Put `redis` as the host instead of `localhost`.
    - Edit whatever else you might want to
-4. Copy config.sample.json https://github.com/vector-im/element-web to ./element/config.json and make the approriate adjustments
+4. Copy config.sample.json from https://github.com/vector-im/element-web to ./element/config.json and make the approriate adjustments
