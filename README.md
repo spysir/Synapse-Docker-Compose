@@ -10,6 +10,7 @@ Matrix Synapse Docker-Compose
    - Change `pepper` in your password config. Uncomment the setting to enable it.
    - Change the default database from SQLite to PostgreSQL
    - Configure the mail credentials if you have a mail server 
+   - Configure `admin_contact` in the homeserver blocking section
    - Enable `encryption_enabled_by_default_for_room_type` by default
    - Enable redis. Put `redis` as the host instead of `localhost`.
    - Edit whatever else you might want to
