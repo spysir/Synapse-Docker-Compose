@@ -44,6 +44,13 @@ services:
       - ./element-config.json:/app/config.json:Z
     networks:
       - matrix
+      
+  synapse-admin:
+    image: awesometechnologies/synapse-admin
+    restart: unless-stopped
+    container_name: synapse-admin
+    networks:
+      - matrix
 
   swag:
     image: ghcr.io/linuxserver/swag
