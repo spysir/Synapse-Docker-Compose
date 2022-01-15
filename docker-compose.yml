@@ -45,17 +45,6 @@ services:
     networks:
       - matrix
 
-  coturn:
-    image: coturn/coturn:alpine
-    restart: unless-stopped
-    container_name: coturn
-    volumes:
-      - ./coturn/turnserver.conf:/etc/turnserver.conf:Z
-      - ./swag/etc/:/keys:Z
-    depends_on:
-      - swag
-    network_mode: host
-
   swag:
     image: ghcr.io/linuxserver/swag
     restart: unless-stopped
@@ -66,7 +55,7 @@ services:
       - PUID=1000
       - PGID=1000
       - URL=yourdomain.tld
-      - SUBDOMAINS=synapse,app,turn
+      - SUBDOMAINS=synapse,element
       - VALIDATION=http
       - EMAIL=changeme@yourdomain.tld
       - ONLY_SUBDOMAINS=true
