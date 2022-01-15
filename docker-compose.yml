@@ -35,13 +35,6 @@ services:
       - ./schemas:/var/lib/postgresql/data:Z
     networks:
       - matrix
-      
-  redis:
-    image: redis:alpine
-    restart: always
-    container_name: redis
-    networks:
-      - matrix
 
   element:
     image: vectorim/element-web:latest
@@ -62,7 +55,7 @@ services:
       - PUID=1000
       - PGID=1000
       - URL=yourdomain.tld
-      - SUBDOMAINS=matrix,app,jitsi
+      - SUBDOMAINS=matrix,app
       - VALIDATION=http
       - EMAIL=changeme@yourdomain.tld
       - ONLY_SUBDOMAINS=true
