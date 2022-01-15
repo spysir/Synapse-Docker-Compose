@@ -45,6 +45,17 @@ services:
     networks:
       - matrix
 
+  coturn:
+    image: coturn/coturn:alpine
+    restart: unless-stopped
+    container_name: coturn
+    volumes:
+      - ./coturn/turnserver.conf:/etc/turnserver.conf:Z
+      - ./swag/etc/letsencrypt/live/matrix.yourdomain.tld:/keys:Z
+    depends_on:
+      - swag
+    network_mode: host
+
   swag:
     image: ghcr.io/linuxserver/swag
     restart: unless-stopped
