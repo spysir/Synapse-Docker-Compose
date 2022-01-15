@@ -51,7 +51,7 @@ services:
     container_name: coturn
     volumes:
       - ./coturn/turnserver.conf:/etc/turnserver.conf:Z
-      - ./swag/etc/letsencrypt/live/matrix.yourdomain.tld:/keys:Z
+      - ./swag/etc/letsencrypt/:/keys:Z
     depends_on:
       - swag
     network_mode: host
