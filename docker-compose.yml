@@ -62,7 +62,7 @@ services:
       - PUID=1000
       - PGID=1000
       - URL=yourdomain.tld
-      - SUBDOMAINS=matrix,app
+      - SUBDOMAINS=matrix,app,admin
       - VALIDATION=http
       - EMAIL=changeme@yourdomain.tld
       - ONLY_SUBDOMAINS=true
