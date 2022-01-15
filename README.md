@@ -12,6 +12,5 @@ Matrix Synapse Docker-Compose
    - Configure the mail credentials if you have a mail server 
    - Configure `admin_contact` in the homeserver blocking section
    - Enable `encryption_enabled_by_default_for_room_type` by default
-   - Enable redis. Put `redis` as the host instead of `localhost`.
    - Edit whatever else you might want to
 4. Copy config.sample.json from https://github.com/vector-im/element-web to `./element/config.json` and make the approriate adjustments
