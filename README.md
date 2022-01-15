@@ -14,3 +14,4 @@ Matrix Synapse Docker-Compose
    - Enable `encryption_enabled_by_default_for_room_type` by default
    - Edit whatever else you might want to
 4. Copy config.sample.json from https://github.com/vector-im/element-web to `./element/config.json` and make the approriate adjustments
+5. Follow https://matrix-org.github.io/synapse/latest/turn-howto.html and edit `./coturn/turnserver.conf` accordingly
