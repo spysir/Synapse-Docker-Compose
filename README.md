@@ -15,3 +15,4 @@ Matrix Synapse Docker-Compose
    - Edit whatever else you might want to
 4. Copy config.sample.json from https://github.com/vector-im/element-web to `./element/config.json` and make the approriate adjustments
 5. Follow https://matrix-org.github.io/synapse/latest/turn-howto.html and edit `./coturn/turnserver.conf` accordingly
+6. Run `docker-compose up` and make sure nothing errors out. You can use `docker-compose up -d` to start it in the background if you want.
