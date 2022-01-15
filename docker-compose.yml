@@ -44,13 +44,6 @@ services:
       - ./element-config.json:/app/config.json:Z
     networks:
       - matrix
-      
-  synapse-admin:
-    image: awesometechnologies/synapse-admin
-    restart: unless-stopped
-    container_name: synapse-admin
-    networks:
-      - matrix
 
   swag:
     image: ghcr.io/linuxserver/swag
@@ -62,7 +55,7 @@ services:
       - PUID=1000
       - PGID=1000
       - URL=yourdomain.tld
-      - SUBDOMAINS=matrix,app,admin
+      - SUBDOMAINS=matrix,app
       - VALIDATION=http
       - EMAIL=changeme@yourdomain.tld
       - ONLY_SUBDOMAINS=true
