@@ -18,7 +18,7 @@ services:
     volumes:
       - ./files:/data:Z
     # Uncomment if you want to install appservices. The registration files should go into ./bridges, and in your homeserver.yaml specify that it should install the appservices in /bridges.
-    #  - ./bridges:/bridges:ro
+    #  - ./bridges:/bridges:Z
     # Uncomment if you want to install the shared_secret_authenticator module. You have to go to https://github.com/devture/matrix-synapse-shared-secret-auth, download it and put it in ./modules. I am not redistributing it here because AGPL bad. 
     #  - ./modules/shared_secret_authenticator.py:/usr/local/lib/python3.8/site-packages/shared_secret_authenticator.py:ro
     depends_on:
