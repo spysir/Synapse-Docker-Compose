@@ -65,7 +65,6 @@ services:
       - ONLY_SUBDOMAINS=true
     volumes:
       - ./swag:/config:Z
-      - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
       - 443:443
